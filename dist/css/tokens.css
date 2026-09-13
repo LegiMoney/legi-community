@@ -1,0 +1,38 @@
+/*
+  Color literals live only in this file — every other stylesheet/script
+  references these custom properties, never a raw hex/rgb value.
+
+  Provenance: k-means (k=4, 30 iterations, seed=42) over brand/LOGO LEGI PNG.png
+  (2000x2000, PNG colortype 2 / truecolor RGB, no alpha), sampled every 4th
+  pixel on each axis. Each token is snapped to the real pixel nearest its
+  cluster centroid — coordinates are (x,y) in the source asset's own grid.
+*/
+:root {
+  /* cluster 1: 96.12% of sampled pixels — real pixel (0,0) */
+  --legi-orange: #FF6E01;
+  /* cluster 2: 3.49% of sampled pixels — real pixel (1332,756), wordmark fill */
+  --legi-cream: #F3F0ED;
+  /* cluster 3: 0.22% of sampled pixels — real pixel (1484,1116), accent dot */
+  --legi-peach: #FBC5A0;
+  /* cluster 4: 0.17% of sampled pixels — real pixel (1056,996), glyph edge blend */
+  --legi-orange-deep: #FD9546;
+
+  /* structural tokens, matched to measured own.money values (own.money is
+     reference-only; these are our own values, not copied assets) */
+  --bg: #12100E;               /* measured: rgb(18,16,14) on own.money body */
+  --fg: var(--legi-cream);
+  --fg-muted: #A49C8F;         /* measured: rgb(164,156,143) nav link color */
+  --surface: #1B1815;
+  --border: rgba(243,240,237,0.10);
+  --radius-sm: 8px;            /* measured: own.money button border-radius */
+  --radius-md: 14px;
+  --font-sans: -apple-system, "Segoe UI", "DM Sans", system-ui, sans-serif;
+  --font-serif: "Legi Serif", Georgia, "Times New Roman", serif;
+
+  --header-h: 70px;            /* measured: own.money header height */
+
+  --gate-inert-opacity: 0.42;
+
+  --on-orange: #16110B;         /* dark text sat atop --legi-orange/--legi-peach for contrast */
+  --fg-muted-wash: rgba(164,156,143,0.15);
+}

@@ -1,0 +1,25 @@
+{
+  "contractAddress": {
+    "value": null,
+    "status": "absent",
+    "checkedAt": "2026-09-13"
+  },
+  "chain": {
+    "name": "Robinhood Chain",
+    "chainIdHex": "0x1237",
+    "chainIdDec": 4663,
+    "rpc": "https://rpc.mainnet.chain.robinhood.com",
+    "status": "stated",
+    "source": "client statement 2026-09-02, batch-level"
+  },
+  "socials": {
+    "x": {
+      "url": null,
+      "status": "unconfirmed"
+    },
+    "github": {
+      "url": null,
+      "status": "unconfirmed"
+    }
+  }
+}
